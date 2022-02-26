@@ -38,6 +38,7 @@ namespace GameMVC.Controllers
             var showPlayer = _context.Players.Include(t => t.Team).Include(t => t.State).SingleOrDefault(p => p.Id == id);
             if (showPlayer == null)
                 return HttpNotFound();
+            
 
             return View(showPlayer);
         }
@@ -81,6 +82,31 @@ namespace GameMVC.Controllers
                 States = status
             };
             return View("PlayerForm", viewModel);
+        }
+
+        //EDIT: Player/Edit/{id}
+        public ActionResult Edit(int id)
+        {
+            var player = _context.Players.SingleOrDefault(c => c.Id == id);
+            var editPlayer = new PlayerFormViewModel()
+            {
+                Player = player,
+                Teams = _context.Teams.ToList(),
+                States = _context.States.ToList()
+            };
+            return View("PlayerForm", editPlayer);
+        }
+
+        //DELETE: Player/Delete/{id}
+        public ActionResult Delete(int id)
+        {
+            var player = _context.Players.Include(t => t.Team).Include(t => t.State).SingleOrDefault(p => p.Id == id);
+            if (player == null)
+                 return HttpNotFound();
+
+            _context.Players.Remove(player);
+            _context.SaveChanges();
+            return RedirectToAction("Index", "Player");
         }
 
     }

@@ -1,4 +1,5 @@
-﻿@using Microsoft.Ajax.Utilities
+﻿@using GameMVC.Models
+@using Microsoft.Ajax.Utilities
 @model GameMVC.Models.Player
 @{
     ViewBag.Title = "Show";
@@ -6,12 +7,23 @@
 }
 
 <h2>@Model.Name @Model.Lastname</h2>
+<p>
+    @Html.ActionLink("Back", "Index", "Player", null, new { @class = "btn btn-primary" })
+    @Html.ActionLink("Edit", "Edit", "Player", new { id = Model.Id }, new { @class = "btn btn-primary" })
+    @Html.ActionLink("Delete", "Delete", "Player", new { id = Model.Id }, new { @class = "btn btn-danger" })
+
+</p>
 <ul>
     <li><strong>Date of Birth:</strong> @Model.Birthdate.ToShortDateString()</li>
+
     <li><strong>Passport:</strong> @Model.Passport</li>
+
     <li><strong>Address:</strong> @Model.Address</li>
+
     <li><strong>Sex:</strong> @Model.Sex</li>
+
     <li><strong>Team:</strong> @Model.Team.Name</li>
+
     <li><strong>Status:</strong> @Model.State.NameState</li>
 </ul>
 

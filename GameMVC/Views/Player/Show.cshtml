@@ -1,0 +1,17 @@
+﻿@using Microsoft.Ajax.Utilities
+@model GameMVC.Models.Player
+@{
+    ViewBag.Title = "Show";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@Model.Name @Model.Lastname</h2>
+<ul>
+    <li><strong>Date of Birth:</strong> @Model.Birthdate.ToShortDateString()</li>
+    <li><strong>Passport:</strong> @Model.Passport</li>
+    <li><strong>Address:</strong> @Model.Address</li>
+    <li><strong>Sex:</strong> @Model.Sex</li>
+    <li><strong>Team:</strong> @Model.Team.Name</li>
+    <li><strong>Status:</strong> @Model.State.NameState</li>
+</ul>
+

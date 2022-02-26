@@ -1,0 +1,56 @@
+﻿@model GameMVC.ViewModels.PlayerFormViewModel
+@{
+    ViewBag.Title = "PlayerForm";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>New Player</h2>
+<p><strong>(*) Required</strong></p>
+@using (@Html.BeginForm("Save", "Player"))
+{
+    <div class="form-group">
+        @Html.LabelFor(p => p.Player.Name)
+        @Html.TextBoxFor(p => p.Player.Name, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(p => p.Player.Lastname)
+        @Html.TextBoxFor(p => p.Player.Lastname, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(p => p.Player.Birthdate)
+        @Html.TextBoxFor(p => p.Player.Birthdate, "{0:d MMM yyyy}", new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(p => p.Player.Passport)
+        @Html.TextBoxFor(p => p.Player.Passport, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(p => p.Player.Address)
+        @Html.TextBoxFor(p => p.Player.Address, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(p => p.Player.Sex)
+        @Html.TextBoxFor(p => p.Player.Sex, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(p => p.Player.TeamId)
+        @Html.DropDownListFor(p => p.Player.TeamId, new SelectList(Model.Teams, "Id", "Name"), "Select Team", new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(p => p.Player.StateId)
+        @Html.DropDownListFor(p => p.Player.StateId, new SelectList(Model.States, "Id", "NameState"), "Select state", new { @class = "form-control" })
+    </div>
+
+    @Html.HiddenFor(p => p.Player.Id)
+
+    @Html.ActionLink("Back", "Index", "Player", null, new { @class = "btn btn-danger" })
+    <button type="submit" class="btn btn-success">Save</button>
+}
+

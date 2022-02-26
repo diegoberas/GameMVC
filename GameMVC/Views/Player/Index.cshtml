@@ -1,8 +1,38 @@
-﻿
+﻿@model IEnumerable<GameMVC.Models.Player>
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
+<h2>Players</h2>
+
+@if (!Model.Any())
+{
+    <p>Player does not exist</p>
+}
+else
+{
+    <p>
+        @Html.ActionLink("New Player", "New", "Player", null, new { @class = "btn btn-primary" })
+    </p>
+
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>Player</th>
+                <th>Team</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var players in Model)
+            {
+                <tr>
+                    <td>@Html.ActionLink(players.Name + " " + players.Lastname, "Show", "Player", new { id = players.Id }, null)</td>
+                    <td>@players.Team.Name</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+}
 

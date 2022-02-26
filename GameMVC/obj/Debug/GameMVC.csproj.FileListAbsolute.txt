@@ -51,6 +51,8 @@ C:\Users\Diego Beras\source\repos\GameMVC\GameMVC\bin\roslyn\vbc.rsp
 C:\Users\Diego Beras\source\repos\GameMVC\GameMVC\bin\roslyn\VBCSCompiler.exe
 C:\Users\Diego Beras\source\repos\GameMVC\GameMVC\bin\roslyn\VBCSCompiler.exe.config
 C:\Users\Diego Beras\source\repos\GameMVC\GameMVC\bin\Antlr3.Runtime.dll
+C:\Users\Diego Beras\source\repos\GameMVC\GameMVC\bin\EntityFramework.dll
+C:\Users\Diego Beras\source\repos\GameMVC\GameMVC\bin\EntityFramework.SqlServer.dll
 C:\Users\Diego Beras\source\repos\GameMVC\GameMVC\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\Diego Beras\source\repos\GameMVC\GameMVC\bin\Microsoft.Web.Infrastructure.dll
 C:\Users\Diego Beras\source\repos\GameMVC\GameMVC\bin\Newtonsoft.Json.dll
@@ -62,6 +64,8 @@ C:\Users\Diego Beras\source\repos\GameMVC\GameMVC\bin\System.Web.WebPages.Deploy
 C:\Users\Diego Beras\source\repos\GameMVC\GameMVC\bin\System.Web.WebPages.dll
 C:\Users\Diego Beras\source\repos\GameMVC\GameMVC\bin\System.Web.WebPages.Razor.dll
 C:\Users\Diego Beras\source\repos\GameMVC\GameMVC\bin\WebGrease.dll
+C:\Users\Diego Beras\source\repos\GameMVC\GameMVC\bin\EntityFramework.xml
+C:\Users\Diego Beras\source\repos\GameMVC\GameMVC\bin\EntityFramework.SqlServer.xml
 C:\Users\Diego Beras\source\repos\GameMVC\GameMVC\bin\System.Web.Helpers.xml
 C:\Users\Diego Beras\source\repos\GameMVC\GameMVC\bin\System.Web.Mvc.xml
 C:\Users\Diego Beras\source\repos\GameMVC\GameMVC\bin\System.Web.Optimization.xml
@@ -72,15 +76,11 @@ C:\Users\Diego Beras\source\repos\GameMVC\GameMVC\bin\System.Web.WebPages.Razor.
 C:\Users\Diego Beras\source\repos\GameMVC\GameMVC\bin\Newtonsoft.Json.xml
 C:\Users\Diego Beras\source\repos\GameMVC\GameMVC\bin\Antlr3.Runtime.pdb
 C:\Users\Diego Beras\source\repos\GameMVC\GameMVC\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\Diego Beras\source\repos\GameMVC\GameMVC\obj\Debug\GameMVC.csproj.AssemblyReference.cache
+C:\Users\Diego Beras\source\repos\GameMVC\GameMVC\obj\Debug\GameMVC.Migrations.InitialModel.resources
+C:\Users\Diego Beras\source\repos\GameMVC\GameMVC\obj\Debug\GameMVC.Migrations.UpdatePlayerTableAddressOptional.resources
+C:\Users\Diego Beras\source\repos\GameMVC\GameMVC\obj\Debug\GameMVC.csproj.GenerateResource.cache
 C:\Users\Diego Beras\source\repos\GameMVC\GameMVC\obj\Debug\GameMVC.csproj.CoreCompileInputs.cache
 C:\Users\Diego Beras\source\repos\GameMVC\GameMVC\obj\Debug\GameMVC.csproj.CopyComplete
 C:\Users\Diego Beras\source\repos\GameMVC\GameMVC\obj\Debug\GameMVC.dll
 C:\Users\Diego Beras\source\repos\GameMVC\GameMVC\obj\Debug\GameMVC.pdb
-C:\Users\Diego Beras\source\repos\GameMVC\GameMVC\bin\EntityFramework.dll
-C:\Users\Diego Beras\source\repos\GameMVC\GameMVC\bin\EntityFramework.SqlServer.dll
-C:\Users\Diego Beras\source\repos\GameMVC\GameMVC\bin\EntityFramework.xml
-C:\Users\Diego Beras\source\repos\GameMVC\GameMVC\bin\EntityFramework.SqlServer.xml
-C:\Users\Diego Beras\source\repos\GameMVC\GameMVC\obj\Debug\GameMVC.Migrations.InitialModel.resources
-C:\Users\Diego Beras\source\repos\GameMVC\GameMVC\obj\Debug\GameMVC.csproj.GenerateResource.cache
-C:\Users\Diego Beras\source\repos\GameMVC\GameMVC\obj\Debug\GameMVC.Migrations.UpdatePlayerTableAddressOptional.resources
+C:\Users\Diego Beras\source\repos\GameMVC\GameMVC\obj\Debug\GameMVC.csproj.AssemblyReference.cache

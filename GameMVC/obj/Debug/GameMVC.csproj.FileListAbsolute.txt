@@ -83,3 +83,4 @@ C:\Users\Diego Beras\source\repos\GameMVC\GameMVC\bin\EntityFramework.xml
 C:\Users\Diego Beras\source\repos\GameMVC\GameMVC\bin\EntityFramework.SqlServer.xml
 C:\Users\Diego Beras\source\repos\GameMVC\GameMVC\obj\Debug\GameMVC.Migrations.InitialModel.resources
 C:\Users\Diego Beras\source\repos\GameMVC\GameMVC\obj\Debug\GameMVC.csproj.GenerateResource.cache
+C:\Users\Diego Beras\source\repos\GameMVC\GameMVC\obj\Debug\GameMVC.Migrations.UpdatePlayerTableAddressOptional.resources

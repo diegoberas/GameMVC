@@ -26,7 +26,7 @@ namespace GameMVC.EntityConfigurations
                 .IsRequired();
 
             Property(p => p.Passport)
-                .IsRequired()
+                .IsOptional()
                 .HasMaxLength(15);
 
             Property(p => p.Address)

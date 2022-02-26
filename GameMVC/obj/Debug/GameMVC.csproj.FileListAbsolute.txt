@@ -77,3 +77,9 @@ C:\Users\Diego Beras\source\repos\GameMVC\GameMVC\obj\Debug\GameMVC.csproj.CoreC
 C:\Users\Diego Beras\source\repos\GameMVC\GameMVC\obj\Debug\GameMVC.csproj.CopyComplete
 C:\Users\Diego Beras\source\repos\GameMVC\GameMVC\obj\Debug\GameMVC.dll
 C:\Users\Diego Beras\source\repos\GameMVC\GameMVC\obj\Debug\GameMVC.pdb
+C:\Users\Diego Beras\source\repos\GameMVC\GameMVC\bin\EntityFramework.dll
+C:\Users\Diego Beras\source\repos\GameMVC\GameMVC\bin\EntityFramework.SqlServer.dll
+C:\Users\Diego Beras\source\repos\GameMVC\GameMVC\bin\EntityFramework.xml
+C:\Users\Diego Beras\source\repos\GameMVC\GameMVC\bin\EntityFramework.SqlServer.xml
+C:\Users\Diego Beras\source\repos\GameMVC\GameMVC\obj\Debug\GameMVC.Migrations.InitialModel.resources
+C:\Users\Diego Beras\source\repos\GameMVC\GameMVC\obj\Debug\GameMVC.csproj.GenerateResource.cache

@@ -72,27 +72,41 @@ namespace GameMVC.Controllers
         [HttpPost]
         public ActionResult Save(Player player)
         {
+            if (!ModelState.IsValid)
+            {
+                var viewModel = new PlayerFormViewModel()
+                {
+                    Player = player,
+                    Teams = _context.Teams.ToList(),
+                    States = _context.States.ToList()
+                };
+                return View("PlayerForm", viewModel);
+            }
+            
             var findPlayer = _context.Players.SingleOrDefault(p => p.Id == player.Id);
             if (findPlayer == null)
             {
-                _context.Players.Add(player);
+                    _context.Players.Add(player);
             }
             else
             {
-                findPlayer.Name = player.Name;
-                findPlayer.Lastname = player.Lastname;
-                findPlayer.Birthdate = player.Birthdate;
-                findPlayer.Passport = player.Passport;
-                findPlayer.Address = player.Address;
-                findPlayer.Sex = player.Sex;
-                findPlayer.TeamId = player.TeamId;
-                findPlayer.StateId = player.StateId;
+                    findPlayer.Name = player.Name;
+                    findPlayer.Lastname = player.Lastname;
+                    findPlayer.Birthdate = player.Birthdate;
+                    findPlayer.Passport = player.Passport;
+                    findPlayer.Address = player.Address;
+                    findPlayer.Sex = player.Sex;
+                    findPlayer.TeamId = player.TeamId;
+                    findPlayer.StateId = player.StateId;
 
             }
 
             _context.SaveChanges();
 
             return RedirectToAction("Index", "Player");
+            
+
+           
 
         }
 

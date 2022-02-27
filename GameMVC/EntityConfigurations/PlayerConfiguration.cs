@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data.Entity.ModelConfiguration;
 using System.Linq;
 using System.Web;
+using System.Web.UI.WebControls;
 using GameMVC.Models;
 
 namespace GameMVC.EntityConfigurations
@@ -26,7 +27,7 @@ namespace GameMVC.EntityConfigurations
                 .IsRequired();
 
             Property(p => p.Passport)
-                .IsOptional()
+                .IsRequired()
                 .HasMaxLength(15);
 
             Property(p => p.Address)

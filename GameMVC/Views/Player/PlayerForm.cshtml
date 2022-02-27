@@ -5,27 +5,30 @@
 }
 
 <h2>New Player</h2>
-<p><strong>(*) Required</strong></p>
 @using (@Html.BeginForm("Save", "Player"))
 {
-    <div class="form-group">
-        @Html.LabelFor(p => p.Player.Name)
-        @Html.TextBoxFor(p => p.Player.Name, new { @class = "form-control" })
-    </div>
+<div class="form-group">
+    @Html.LabelFor(p => p.Player.Name)
+    @Html.TextBoxFor(p => p.Player.Name, new { @class = "form-control" })
+    @Html.ValidationMessageFor(p => p.Player.Name)
+</div>
 
     <div class="form-group">
         @Html.LabelFor(p => p.Player.Lastname)
         @Html.TextBoxFor(p => p.Player.Lastname, new { @class = "form-control" })
+        @Html.ValidationMessageFor(p => p.Player.Lastname)
     </div>
 
     <div class="form-group">
         @Html.LabelFor(p => p.Player.Birthdate)
         @Html.TextBoxFor(p => p.Player.Birthdate, "{0:d MMM yyyy}", new { @class = "form-control" })
+        @Html.ValidationMessageFor(p => p.Player.Birthdate)
     </div>
 
     <div class="form-group">
         @Html.LabelFor(p => p.Player.Passport)
         @Html.TextBoxFor(p => p.Player.Passport, new { @class = "form-control" })
+        @Html.ValidationMessageFor(p => p.Player.Passport)
     </div>
 
     <div class="form-group">
@@ -34,8 +37,9 @@
     </div>
 
     <div class="form-group">
-        @Html.LabelFor(p => p.Player.Sex)
+        @Html.LabelFor(p => p.Player.Sex)<label> (M / F)</label>
         @Html.TextBoxFor(p => p.Player.Sex, new { @class = "form-control" })
+        @Html.ValidationMessageFor(p => p.Player.Sex)
     </div>
 
     <div class="form-group">
@@ -46,6 +50,7 @@
     <div class="form-group">
         @Html.LabelFor(p => p.Player.StateId)
         @Html.DropDownListFor(p => p.Player.StateId, new SelectList(Model.States, "Id", "NameState"), "Select state", new { @class = "form-control" })
+        @Html.ValidationMessageFor(p => p.Player.StateId)
     </div>
 
     @Html.HiddenFor(p => p.Player.Id)

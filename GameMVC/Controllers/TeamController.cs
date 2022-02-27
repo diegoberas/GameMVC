@@ -46,6 +46,17 @@ namespace GameMVC.Controllers
         [HttpPost]
         public ActionResult Save(Team team)
         {
+            if (!ModelState.IsValid)
+            {
+                var viewModel = new TeamFormViewModel()
+                {
+                    Team = team,
+                    Countries = _context.Countries.ToList()
+                };
+
+                return View("TeamForm", viewModel);
+            }
+
             var findTeam = _context.Teams.SingleOrDefault(t => t.Id == team.Id);
             if (findTeam == null)
             {
@@ -84,7 +95,7 @@ namespace GameMVC.Controllers
             var editTeam = new TeamFormViewModel()
             {
                 Team = team,
-                Countries = _context.Countries.ToList(),
+                Countries = _context.Countries.ToList()
             };
 
             return View("TeamForm", editTeam);

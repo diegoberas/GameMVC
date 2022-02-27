@@ -145,10 +145,15 @@
     <Compile Include="Migrations\202202260351315_UpdatePlayerTableAddressOptional.designer.cs">
       <DependentUpon>202202260351315_UpdatePlayerTableAddressOptional.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202202271807116_UpdatePlayerTablePassportToRequired.cs" />
+    <Compile Include="Migrations\202202271807116_UpdatePlayerTablePassportToRequired.designer.cs">
+      <DependentUpon>202202271807116_UpdatePlayerTablePassportToRequired.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Country.cs" />
     <Compile Include="Models\GameContext.cs" />
     <Compile Include="Models\Player.cs" />
+    <Compile Include="Models\SexValidation.cs" />
     <Compile Include="Models\State.cs" />
     <Compile Include="Models\Team.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -226,6 +231,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202202260351315_UpdatePlayerTableAddressOptional.resx">
       <DependentUpon>202202260351315_UpdatePlayerTableAddressOptional.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202202271807116_UpdatePlayerTablePassportToRequired.resx">
+      <DependentUpon>202202271807116_UpdatePlayerTablePassportToRequired.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

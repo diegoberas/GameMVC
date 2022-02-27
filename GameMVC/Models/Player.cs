@@ -11,25 +11,30 @@ namespace GameMVC.Models
         public int Id { get; set; }
 
 
-        [Display(Name = "* First Name")]
+        [Required]
+        [Display(Name = "First Name")]
         public string Name { get; set; }
 
 
-        [Display(Name = "* Last Name")]
+        [Required]
+        [Display(Name = "Last Name")]
         public string Lastname  { get; set; }
 
 
-        [Display(Name = "* Date of Birth")]
+        [Display(Name = "Date of Birth")]
         public DateTime Birthdate { get; set; }
 
 
+        [Required]
         public string Passport { get; set; }
 
 
         public string Address { get; set; }
 
 
-        [Display(Name = "* Sex (M / F)")]
+        [Required]
+        [SexValidation]
+        [Display(Name = "Sex")]
         public string Sex { get; set; }
 
 
@@ -40,7 +45,7 @@ namespace GameMVC.Models
 
 
         public State State { get; set; }
-        [Display(Name = "* Status")]
+        [Display(Name = "Status")]
         public int StateId { get; set; }
     }
 }

@@ -30,6 +30,31 @@ namespace GameMVC.Controllers
             var getPlayers = _context.Players.Include(t => t.Team).Include(p => p.State).ToList();
 
             return View(getPlayers);
+
+        }
+
+        // GET: Player/Active
+        public ActionResult Active()
+        {
+            var getActives = _context.Players.Include(t => t.Team).Include(p => p.State).ToList().Where(p => p.StateId == 1);
+
+            return View(getActives);
+        }
+
+        // GET: Player/Cancelled
+        public ActionResult Cancelled()
+        {
+            var getCancel = _context.Players.Include(t => t.Team).Include(p => p.State).ToList().Where(p => p.StateId == 2);
+
+            return View(getCancel);
+        }
+
+        // GET: Player/Free
+        public ActionResult Free()
+        {
+            var getFree = _context.Players.Include(t => t.Team).Include(p => p.State).ToList().Where(p => p.StateId == 3);
+
+            return View(getFree);
         }
 
         // GET: Player/Show/{id}

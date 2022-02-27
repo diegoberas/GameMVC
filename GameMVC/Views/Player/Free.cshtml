@@ -1,32 +1,28 @@
 ﻿@model IEnumerable<GameMVC.Models.Player>
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Free";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Players</h2>
+<h2>Free Agent Players</h2>
 
-<p>
-    @Html.ActionLink("New Player", "New", "Player", null, new { @class = "btn btn-primary" })
-</p>
+<p>@Html.ActionLink("Back", "Index", "Player", null, new { @class = "btn btn-primary" })</p>
 
-
-<p>
-    <strong>State:</strong>
-    @Html.ActionLink("Active", "Active", "Player", null, new { @class = "btn btn-light" })
-    @Html.ActionLink("Cancelled", "Cancelled", "Player", null, new { @class = "btn btn-light" })
-    @Html.ActionLink("Free Agent", "Free", "Player", null, new { @class = "btn btn-light" })
-</p>
-
-<table class="table table-bordered table-hover">
-    <thead>
+@if (!Model.Any())
+{
+    <p><strong>0 results found</strong></p>
+}
+else
+{
+    <table class="table table-bordered table-hover">
+        <thead>
         <tr>
             <th>Player</th>
             <th>State</th>
             <th>Team</th>
         </tr>
-    </thead>
-    <tbody>
+        </thead>
+        <tbody>
         @foreach (var players in Model)
         {
             <tr>
@@ -41,12 +37,10 @@
                     {
                         <text> Select team </text>
                     }
-            </td>
-        </tr>
-    }
-    </tbody>
-</table>
+                </td>
+            </tr>
+        }
+        </tbody>
+    </table>
 
-
-
-
+}

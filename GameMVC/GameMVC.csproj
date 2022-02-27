@@ -200,6 +200,9 @@
     <Content Include="Views\Team\Index.cshtml" />
     <Content Include="Views\Team\Show.cshtml" />
     <Content Include="Views\Team\TeamForm.cshtml" />
+    <Content Include="Views\Player\Active.cshtml" />
+    <Content Include="Views\Player\Cancelled.cshtml" />
+    <Content Include="Views\Player\Free.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -1,0 +1,45 @@
+﻿@model IEnumerable<GameMVC.Models.Player>
+@{
+    ViewBag.Title = "Cancelled";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Cancelled Players</h2>
+<p>@Html.ActionLink("Back", "Index", "Player", null, new { @class = "btn btn-primary" })</p>
+
+@if (!Model.Any())
+{
+    <p><strong>0 results found</strong></p>
+}
+else
+{
+    <table class="table table-bordered table-hover">
+        <thead>
+        <tr>
+            <th>Player</th>
+            <th>State</th>
+            <th>Team</th>
+        </tr>
+        </thead>
+        <tbody>
+          @foreach (var players in Model)
+           {
+             <tr>
+                <td>@Html.ActionLink(players.Name + " " + players.Lastname, "Show", "Player", new { id = players.Id }, null)</td>
+                <td>@players.State.NameState</td>
+                <td>
+                    @if (players.TeamId != null)
+                    {
+                        @players.Team.Name
+                    }
+                    else
+                    {
+                        <text> Select team </text>
+                    }
+                </td>
+             </tr>
+           }
+        </tbody>
+    </table>
+}
+

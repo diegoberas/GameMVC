@@ -28,6 +28,7 @@ namespace GameMVC.EntityConfigurations
                 .IsRequired()
                 .HasMaxLength(20);
 
+
             HasMany(c => c.Players)
                 .WithOptional(p => p.Team)
                 .HasForeignKey(p => p.TeamId)

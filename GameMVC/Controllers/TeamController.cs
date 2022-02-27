@@ -83,6 +83,7 @@ namespace GameMVC.Controllers
             var country = _context.Countries.ToList();
             var viewModel = new TeamFormViewModel()
             {
+                Team = new Team(),
                 Countries = country
             };
             return View("TeamForm", viewModel);

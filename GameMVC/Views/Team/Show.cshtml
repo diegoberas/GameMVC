@@ -15,6 +15,11 @@
 
 </p>
 
+@if(!Model.Players.Any())
+{
+<p><strong>0 results found</strong></p>
+}
+
 <table class="table table-bordered table-hover">
     <thead>
         <tr>
@@ -27,7 +32,8 @@
         {
             <tr>
                 <td>@player.Name @player.Lastname</td>
-                <td>@if (@player.StateId == 1)
+                <td>
+                    @if (@player.StateId == 1)
                     {
                         <text>Active</text>
                     }
@@ -43,10 +49,12 @@
                     {
                         <text></text>
                     }
-                    
+
                 </td>
-            </tr>
-        }
+            </tr> 
+            
+            
+         }
     </tbody>
 </table>
 

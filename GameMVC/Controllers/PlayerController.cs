@@ -72,19 +72,17 @@ namespace GameMVC.Controllers
         [HttpPost]
         public ActionResult Save(Player player)
         {
-            if (!ModelState.IsValid)
+            if (!ModelState.IsValid) //Validation empty spaces
             {
                 var viewModel = new PlayerFormViewModel()
                 {
-                    Player = player,
                     Teams = _context.Teams.ToList(),
                     States = _context.States.ToList()
                 };
                 return View("PlayerForm", viewModel);
             }
-            
             var findPlayer = _context.Players.SingleOrDefault(p => p.Id == player.Id);
-            if (findPlayer == null)
+             if (findPlayer == null)
             {
                     _context.Players.Add(player);
             }
@@ -105,22 +103,25 @@ namespace GameMVC.Controllers
 
             return RedirectToAction("Index", "Player");
             
-
-           
-
         }
 
         //GET: Player/New
         public ActionResult New()
         {
+            
+
             var team = _context.Teams.ToList();
             var status = _context.States.ToList();
             var viewModel = new PlayerFormViewModel()
             {
-                Teams = team,
+                Player = new Player(),
+                Teams = team, 
                 States = status
-            };
+            }; 
             return View("PlayerForm", viewModel);
+            
+
+           
         }
 
         //EDIT: Player/Edit/{id}

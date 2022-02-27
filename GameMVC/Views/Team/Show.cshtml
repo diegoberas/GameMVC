@@ -1,0 +1,52 @@
+﻿@using GameMVC.Models
+@model GameMVC.Models.Team
+
+
+@{
+    ViewBag.Title = "Show";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@Model.Name</h2>
+<p>
+    @Html.ActionLink("Back", "Index", "Team", null, new { @class = "btn btn-primary" })
+    @Html.ActionLink("Edit", "Edit", "Team", new { id = Model.Id }, new { @class = "btn btn-primary" })
+    @Html.ActionLink("Delete", "Delete", "Team", new { id = Model.Id }, new { @class = "btn btn-danger" })
+
+</p>
+
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Team Players</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var player in Model.Players)
+        {
+            <tr>
+                <td>@player.Name @player.Lastname</td>
+                <td>@if (@player.StateId == 1)
+                    {
+                        <text>Active</text>
+                    }
+                    else if (@player.StateId == 2)
+                    {
+                        <text>Cancelled</text>
+                    }
+                    else if (@player.StateId == 3)
+                    {
+                        <text>Free Agent</text>
+                    }
+                    else
+                    {
+                        <text></text>
+                    }
+                    
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+

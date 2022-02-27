@@ -20,6 +20,7 @@ else
         <thead>
             <tr>
                 <th>Player</th>
+                <th>State</th>
                 <th>Team</th>
             </tr>
         </thead>
@@ -28,7 +29,15 @@ else
             {
                 <tr>
                     <td>@Html.ActionLink(players.Name + " " + players.Lastname, "Show", "Player", new { id = players.Id }, null)</td>
-                    <td>@players.Team.Name</td>
+                    <td>@players.State.NameState</td>
+                    <td>@if (players.TeamId != null)
+                        {
+                            @players.Team.Name
+                        }
+                        else
+                        {
+                            <text> Select team </text>
+                        }</td>
                 </tr>
             }
         </tbody>

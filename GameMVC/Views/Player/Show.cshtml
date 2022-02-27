@@ -1,5 +1,4 @@
 ﻿@using GameMVC.Models
-@using Microsoft.Ajax.Utilities
 @model GameMVC.Models.Player
 @{
     ViewBag.Title = "Show";
@@ -22,7 +21,14 @@
 
     <li><strong>Sex:</strong> @Model.Sex</li>
 
-    <li><strong>Team:</strong> @Model.Team.Name</li>
+    <li><strong>Team:</strong>@if (Model.TeamId != null)
+                              {
+                                  @Model.Team.Name
+                              }
+                              else
+                              {
+                                  <text>Select team</text>
+                              }</li>
 
     <li><strong>Status:</strong> @Model.State.NameState</li>
 </ul>

@@ -27,7 +27,7 @@ namespace GameMVC.Controllers
         // GET: Player/index
         public ActionResult Index()
         {
-            var getPlayers = _context.Players.Include(t => t.Team).ToList();
+            var getPlayers = _context.Players.Include(t => t.Team).Include(p => p.State).ToList();
 
             return View(getPlayers);
         }

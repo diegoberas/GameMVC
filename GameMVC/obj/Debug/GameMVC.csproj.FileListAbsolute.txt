@@ -84,3 +84,4 @@ C:\Users\Diego Beras\source\repos\GameMVC\GameMVC\obj\Debug\GameMVC.csproj.CopyC
 C:\Users\Diego Beras\source\repos\GameMVC\GameMVC\obj\Debug\GameMVC.dll
 C:\Users\Diego Beras\source\repos\GameMVC\GameMVC\obj\Debug\GameMVC.pdb
 C:\Users\Diego Beras\source\repos\GameMVC\GameMVC\obj\Debug\GameMVC.Migrations.UpdatePlayerTablePassportToRequired.resources
+C:\Users\Diego Beras\source\repos\GameMVC\GameMVC\obj\Debug\GameMVC.csproj.AssemblyReference.cache
